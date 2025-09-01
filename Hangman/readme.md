@@ -13,7 +13,8 @@ The goal is to move beyond random or simple frequency-based guesses by using a *
 
 ## Results
 - The N-gram strategy consistently outperforms baseline letter-frequency guessing.  
-- It is especially effective for longer words where context information is richer.  
+- It is especially effective for longer words where context information is richer.
+- Achieve a out-of-sample accuracy of 60%+
 
 ## Files
 - `hangman_api_user.ipynb` — notebook showing how the strategy works and testing it on sample words.  
