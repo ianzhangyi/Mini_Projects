@@ -35,4 +35,4 @@ Each folder contains a **self-contained mini project** with code and (where usef
 ## Notes
 - These projects are **simplified** by design: small datasets, lightweight algorithms, quick analysis.  
 - They serve as **proof of work** for my ability to explore ideas, write clean code, and communicate results.  
-- For more complete backtesting and research, please see my other repositories (e.g., [QuantConnect Strategy Backte](https://github.com/ianzhangyi/QuantConnect-Lean-Strategy-Backtesting)
+- For more complete backtesting and research, please see my other repositories (e.g., [QuantConnect Strategy Backtest](https://github.com/ianzhangyi/QuantConnect-Lean-Strategy-Backtesting))
