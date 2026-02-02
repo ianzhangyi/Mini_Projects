@@ -6,12 +6,12 @@ from tqdm import tqdm
 API_URL = "https://jhu.instructure.com/api/v1"
 TOKEN = "生成api"
 OUTPUT_DIR = "canvas_backup"   # 下载保存的文件夹
-
+# =======================================
 
 headers = {"Authorization": f"Bearer {TOKEN}"}
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
-
+# 获取所有课程
 print("Fetching your Canvas courses...")
 courses = requests.get(f"{API_URL}/courses?per_page=100", headers=headers).json()
 
@@ -19,10 +19,10 @@ for course in courses:
     cid = course.get("id")
     cname = course.get("name", "Unknown_Course").replace("/", "_").strip()
     course_dir = os.path.join(OUTPUT_DIR, cname)
-    os.makedirs(course_dir, exist_ok=True)   
+    os.makedirs(course_dir, exist_ok=True)
     print(f"\n📚 课程：{cname}")
 
-
+    # 获取课程文件列表（分页处理）
     page = 1
     while True:
         resp = requests.get(f"{API_URL}/courses/{cid}/files?per_page=100&page={page}", headers=headers)
