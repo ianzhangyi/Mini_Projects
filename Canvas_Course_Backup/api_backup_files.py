@@ -7,7 +7,7 @@ API_URL = "https://jhu.instructure.com/api/v1"
 TOKEN = "生成api"
 OUTPUT_DIR = "canvas_backup"   # 下载保存的文件夹
 # =======================================
-
+print('Start to backup files from Canvas...')
 headers = {"Authorization": f"Bearer {TOKEN}"}
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
@@ -22,7 +22,7 @@ for course in courses:
     os.makedirs(course_dir, exist_ok=True)
     print(f"\n📚 课程：{cname}")
 
-    # 获取课程文件列表（分页处理）
+
     page = 1
     while True:
         resp = requests.get(f"{API_URL}/courses/{cid}/files?per_page=100&page={page}", headers=headers)
