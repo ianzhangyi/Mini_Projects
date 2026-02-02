@@ -5,7 +5,7 @@ from tqdm import tqdm
 # ====== 👇 先在这里填写你的信息 👇 ======
 API_URL = "https://jhu.instructure.com/api/v1"
 TOKEN = "生成api"
-OUTPUT_DIR = "canvas_backup"   # 下载保存的文件夹
+OUTPUT_DIR = "canvas_backup" 
 
 
 headers = {"Authorization": f"Bearer {TOKEN}"}
