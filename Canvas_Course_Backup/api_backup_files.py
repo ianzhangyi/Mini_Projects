@@ -11,7 +11,7 @@ OUTPUT_DIR = "canvas_backup"   # 下载保存的文件夹
 headers = {"Authorization": f"Bearer {TOKEN}"}
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
-# 获取所有课程
+
 print("Fetching your Canvas courses...")
 courses = requests.get(f"{API_URL}/courses?per_page=100", headers=headers).json()
 
@@ -19,7 +19,7 @@ for course in courses:
     cid = course.get("id")
     cname = course.get("name", "Unknown_Course").replace("/", "_").strip()
     course_dir = os.path.join(OUTPUT_DIR, cname)
-    os.makedirs(course_dir, exist_ok=True)
+    os.makedirs(course_dir, exist_ok=True)   
     print(f"\n📚 课程：{cname}")
 
 
