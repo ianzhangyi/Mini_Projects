@@ -7,7 +7,7 @@ API_URL = "https://jhu.instructure.com/api/v1"
 TOKEN = "生成api"
 OUTPUT_DIR = "canvas_backup"   # 下载保存的文件夹
 # =======================================
-print('Start to backup files from Canvas...')
+
 headers = {"Authorization": f"Bearer {TOKEN}"}
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
